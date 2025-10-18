@@ -1,0 +1,20 @@
+[build]
+  publish = "public"
+  
+# Edge Function configuration
+[[edge_functions]]
+  function = "image-proxy"
+  path = "/api/image-proxy"
+
+# Cache headers untuk static images (jika ada)
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    
+# Cache headers untuk edge function
+[[headers]]
+  for = "/api/image-proxy"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Netlify-CDN-Cache-Control = "public, durable, s-maxage=31536000"
