@@ -1,0 +1,20 @@
+{
+  "name": "netlify-image-cache",
+  "version": "1.0.0",
+  "description": "Image caching with Netlify Edge Functions",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build needed'",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "netlify",
+    "edge-functions",
+    "image-cache"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
